@@ -20,7 +20,8 @@ def trend(newval):
         print(prevval, newval, newdiff, sumd)
     
     prevval = newval
-    if abs(sumd) >= SIGNIFICANT: return sumd
+    if abs(sumd) >= SIGNIFICANT:
+        return sumd
     return 0  # no change
     
 def barchart(y, v, vmax):
@@ -35,8 +36,10 @@ while True:
     display.clear()
     
     t = trend(reading)
-    if t < 0: display.show(DISCHARGING)
-    elif t > 0: display.show(CHARGING)
+    if t < 0:
+        display.show(DISCHARGING)
+    elif t > 0:
+        display.show(CHARGING)
     
     barchart(4, reading, P0_MAX)
     

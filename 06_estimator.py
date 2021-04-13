@@ -39,8 +39,10 @@ def img(n):
     return Image(c)
 
 def digits(n):
-    if n > 99: display.show(Image.CHESSBOARD)
-    else: display.show(img(n))
+    if n > 99:
+        display.show(Image.CHESSBOARD)
+    else:
+        display.show(img(n))
 
 def read_temp():
     global temp
@@ -73,8 +75,10 @@ while True:
     read_temp()
 
     # control
-    if fan_needed(): fan_on()
-    elif fan_not_needed(): fan_off()
+    if fan_needed():
+        fan_on()
+    elif fan_not_needed():
+        fan_off()
 
     # display
     digits(remaining(stored))

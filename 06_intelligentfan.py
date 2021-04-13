@@ -38,8 +38,10 @@ while True:
     read_temp()
 
     # control
-    if fan_needed(): fan_on()
-    elif fan_not_needed(): fan_off()
+    if fan_needed():
+        fan_on()
+    elif fan_not_needed():
+        fan_off()
 
     print(stored, temp)
     sleep(1000)
